@@ -37,7 +37,7 @@ public class RegistrationPage extends BasePage {
     private WebElement saveBtn;
 
 
-    public RegistrationPage goToCreateAccount(){
+    public RegistrationPage selectRandomSocialTitle(){
         getRandomElement(genderRadioBtn);
         return this;
     }

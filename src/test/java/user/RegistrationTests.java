@@ -1,10 +1,13 @@
 package user;
 
 import base.TestBase;
+import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 import pages.commons.TopManuPage;
 import pages.user.LoginPage;
 import pages.user.RegistrationPage;
+
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class RegistrationTests extends TestBase {
 
@@ -13,7 +16,7 @@ public class RegistrationTests extends TestBase {
         new TopManuPage(driver).goToSignIn();
         new LoginPage(driver).goToCreateAccount();
 
-        new RegistrationPage(driver).goToCreateAccount()
+        new RegistrationPage(driver).selectRandomSocialTitle()
                 .setFirstName("Seb")
                 .setLastName("Kow")
                 .setEmail("asd!@wp.pl")
@@ -22,5 +25,7 @@ public class RegistrationTests extends TestBase {
                 .selectCustomerPrivacy()
                 .selectAcceptPrivatePolicy()
                 .selectSaveBtn();
+
+        Assertions.assertThat(new TopManuPage(driver).getUserName()).isEqualTo("Seb Kow");
     }
 }
