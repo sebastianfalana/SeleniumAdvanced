@@ -9,7 +9,7 @@ import pages.user.RegistrationPage;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-public class RegistrationTests extends TestBase {
+public class RegistrationTest extends TestBase {
 
     @Test
     public void shouldRegisterNewUser(){

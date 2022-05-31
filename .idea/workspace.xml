@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73889fff-6993-4fc7-9a9f-4592fccde42d" name="Changes" comment="add new pages">
+    <list default="true" id="73889fff-6993-4fc7-9a9f-4592fccde42d" name="Changes" comment="add changes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/commons/ProductsListingPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/commons/TopManuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/commons/TopManuPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/user/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/user/RegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/user/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/user/RegistrationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,14 +33,14 @@
     <option name="autoscrollToSource" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
-    <configuration name="RegistrationTests.shouldRegisterNewUser" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationTest.shouldRegisterNewUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumAdvanced" />
       <extension name="coverage">
         <pattern>
@@ -52,7 +49,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="user" />
-      <option name="MAIN_CLASS_NAME" value="user.RegistrationTests" />
+      <option name="MAIN_CLASS_NAME" value="user.RegistrationTest" />
       <option name="METHOD_NAME" value="shouldRegisterNewUser" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -63,7 +60,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.RegistrationTests.shouldRegisterNewUser" />
+        <item itemvalue="TestNG.RegistrationTest.shouldRegisterNewUser" />
       </list>
     </recent_temporary>
   </component>
@@ -97,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653833746207</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add changes">
+      <created>1653835781155</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1653835781155</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,7 +118,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Base test" />
     <MESSAGE value="add new pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new pages" />
+    <MESSAGE value="add changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="add changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
