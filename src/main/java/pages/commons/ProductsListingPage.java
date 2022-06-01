@@ -9,11 +9,9 @@ import pages.base.BasePage;
 import java.util.List;
 
 public class ProductsListingPage extends BasePage {
-    public ProductsListingPage(WebDriver driver) {
-        super(driver);
-    }
+    public ProductsListingPage(WebDriver driver){ super(driver);}
 
-    @FindBy(css=".product-description")
+    @FindBy(css="[class='h3 product-title']")
     private List<WebElement> listOfProducts;
 
     @FindBy(css=".ui-autocomplete-input")
@@ -22,6 +20,9 @@ public class ProductsListingPage extends BasePage {
     @FindBy(css="[type='submit']")
     private WebElement searchIcon;
 
+    @FindBy(css="[class='h3 product-title']")
+    private  WebElement searchResultNameProduct;
+
     public WebElement getRandomProductFromTheList(){
         return getRandomElement(listOfProducts);
     }
@@ -29,4 +30,21 @@ public class ProductsListingPage extends BasePage {
     public String getRandomProductDescription(){
         return getRandomProductFromTheList().getText();
     }
+
+    public ProductsListingPage setSearchProduct(String productName){
+        sendKeys(searchInput,productName);
+        return this;
+    }
+    public ProductsListingPage clickOnSearchIcon(){
+        click(searchIcon);
+        return this;
+    }
+
+    public String getSearchInputText(){
+        return searchInput.getText();
+    }
+    public String getSearchResultNameOfProduct(){
+        return searchResultNameProduct.getText();
+    }
+
 }
