@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73889fff-6993-4fc7-9a9f-4592fccde42d" name="Changes" comment="add homework">
+    <list default="true" id="73889fff-6993-4fc7-9a9f-4592fccde42d" name="Changes" comment="Add third homework exercise">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/shopping/BasketPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/shopping/ProductPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/product/AddProductToBasketAndRemoveTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/commons/ProductsListingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/commons/ProductsListingPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/product/SearchProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/product/SearchProductTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +44,24 @@
   }
 }</component>
   <component name="RunManager" selected="TestNG.SearchProductTest.shouldSearchProduct">
+    <configuration name="AddProductToBasketAndRemoveTest.shouldAddAndRemoveProduct" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumAdvanced" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="product.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="product" />
+      <option name="MAIN_CLASS_NAME" value="product.AddProductToBasketAndRemoveTest" />
+      <option name="METHOD_NAME" value="shouldAddAndRemoveProduct" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RegistrationTest.shouldRegisterNewUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumAdvanced" />
       <extension name="coverage">
@@ -80,6 +101,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.SearchProductTest.shouldSearchProduct" />
+        <item itemvalue="TestNG.AddProductToBasketAndRemoveTest.shouldAddAndRemoveProduct" />
         <item itemvalue="TestNG.RegistrationTest.shouldRegisterNewUser" />
       </list>
     </recent_temporary>
@@ -128,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653999392356</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="edit ProductsListingPage and Test">
+      <created>1654059037128</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1654059037128</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -147,7 +176,9 @@
     <MESSAGE value="add new pages" />
     <MESSAGE value="add changes" />
     <MESSAGE value="add homework" />
-    <option name="LAST_COMMIT_MESSAGE" value="add homework" />
+    <MESSAGE value="edit ProductsListingPage and Test" />
+    <MESSAGE value="Add third homework exercise" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add third homework exercise" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -156,11 +187,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/base/TestBase.java</url>
           <line>27</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/product/SearchProductTest.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
