@@ -4,6 +4,7 @@ import base.TestBase;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 import pages.commons.ProductsListingPage;
+import pages.commons.TopManuPage;
 
 public class SearchProductTest extends TestBase {
 
@@ -12,9 +13,9 @@ public class SearchProductTest extends TestBase {
     public void shouldSearchProduct(){
         String randomProductName = new ProductsListingPage(driver).getRandomProductDescription();
 
-        new ProductsListingPage(driver).setSearchProduct(randomProductName)
+        new TopManuPage(driver).setSearchProduct(randomProductName)
                 .clickOnSearchIcon();
 
-        Assertions.assertThat(new ProductsListingPage(driver).getSearchResultNameOfProduct()).isEqualTo(randomProductName);
+        Assertions.assertThat(new TopManuPage(driver).getSearchResultNameOfProduct()).isEqualTo(randomProductName);
     }
 }
