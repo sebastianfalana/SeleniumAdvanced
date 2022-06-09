@@ -11,6 +11,7 @@ public class SearchProductTest extends TestBase {
     @Test
     public void shouldSearchProduct(){
         String randomProductName = new ProductsListingPage(driver).getRandomProductDescription();
+
         new ProductsListingPage(driver).setSearchProduct(randomProductName)
                 .clickOnSearchIcon();
 

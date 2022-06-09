@@ -1,17 +1,22 @@
 package pages.user;
 
+import com.github.javafaker.Faker;
+import com.github.javafaker.service.FakeValuesService;
+import com.github.javafaker.service.RandomService;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.base.BasePage;
 
 import java.util.List;
+import java.util.Locale;
 
 public class RegistrationPage extends BasePage {
     public RegistrationPage(WebDriver driver) {
         super(driver);
     }
 
+    Faker faker = new Faker();
     @FindBy(css = "[name=id_gender]")
     private List<WebElement> genderRadioBtn;
 
@@ -72,5 +77,12 @@ public class RegistrationPage extends BasePage {
     public RegistrationPage selectSaveBtn(){
         click(saveBtn);
         return this;
+    }
+
+    public String getRandomEmail() {
+        FakeValuesService fakeValuesService = new FakeValuesService(
+                new Locale("en-GB"), new RandomService());
+
+        return fakeValuesService.bothify("????##@yopmail.com");
     }
 }

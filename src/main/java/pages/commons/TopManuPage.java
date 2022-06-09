@@ -13,8 +13,11 @@ public class TopManuPage extends BasePage {
     @FindBy(css = ".user-info .hidden-sm-down")
     private WebElement signInButton;
 
-    @FindBy(css = ".account span")
+    @FindBy(css = "span[class=hidden-sm-down]")
     private WebElement userName;
+
+    @FindBy(css = "#category-3 > .dropdown-item")
+    private WebElement clothesButton;
 
     public void goToSignIn(){
         click(signInButton);

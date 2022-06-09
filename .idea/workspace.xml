@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73889fff-6993-4fc7-9a9f-4592fccde42d" name="Changes" comment="Add third homework exercise">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/shopping/BasketPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/shopping/ProductPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/product/AddProductToBasketAndRemoveTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/base/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/commons/ProductsListingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/commons/ProductsListingPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/commons/TopManuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/commons/TopManuPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/user/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/user/RegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/product/SearchProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/product/SearchProductTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/user/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/user/RegistrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +43,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.SearchProductTest.shouldSearchProduct">
+  <component name="RunManager" selected="TestNG.RegistrationTest.shouldRegisterNewUser">
     <configuration name="AddProductToBasketAndRemoveTest.shouldAddAndRemoveProduct" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumAdvanced" />
       <extension name="coverage">
@@ -100,9 +100,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.RegistrationTest.shouldRegisterNewUser" />
         <item itemvalue="TestNG.SearchProductTest.shouldSearchProduct" />
         <item itemvalue="TestNG.AddProductToBasketAndRemoveTest.shouldAddAndRemoveProduct" />
-        <item itemvalue="TestNG.RegistrationTest.shouldRegisterNewUser" />
       </list>
     </recent_temporary>
   </component>
@@ -157,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654059037128</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add third homework exercise">
+      <created>1654086346854</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1654086346854</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,6 +194,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/base/TestBase.java</url>
           <line>27</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/user/RegistrationTest.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

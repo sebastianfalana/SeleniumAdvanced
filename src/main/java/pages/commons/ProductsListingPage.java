@@ -52,9 +52,6 @@ public class ProductsListingPage extends BasePage {
         return this;
     }
 
-    public String getSearchInputText(){
-        return searchInput.getText();
-    }
     public String getSearchResultNameOfProduct(){
         return searchResultNameProduct.getText();
     }

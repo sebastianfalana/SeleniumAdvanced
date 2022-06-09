@@ -19,7 +19,7 @@ public class RegistrationTest extends TestBase {
         new RegistrationPage(driver).selectRandomSocialTitle()
                 .setFirstName("Seb")
                 .setLastName("Kow")
-                .setEmail("asd!@wp.pl")
+                .setEmail(new RegistrationPage(driver).getRandomEmail())
                 .setPassword("asdasd")
                 .setBirthday("5/12/1987")
                 .selectCustomerPrivacy()
