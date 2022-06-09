@@ -32,9 +32,15 @@ public class BasketPage extends BasePage {
     @FindBy(css=".no-items")
     private WebElement noItemsText;
 
+    @FindBy(css="[class='btn btn-primary']")
+    private WebElement proceedToCheckoutOverview;
 
     public BasketPage selectProceedToCheckout(){
         click(proceedToCheckoutButton);
+        return this;
+    }
+    public BasketPage selectProceedToCheckoutOverview(){
+        click(proceedToCheckoutOverview);
         return this;
     }
     public String getProductNameFromTheBasket(){
