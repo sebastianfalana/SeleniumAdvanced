@@ -4,6 +4,7 @@ import base.TestBase;
 import pages.commons.ProductsListingPage;
 import pages.commons.TopManuPage;
 import pages.shopping.BasketPage;
+import pages.shopping.CheckoutPage;
 import pages.shopping.ProductPage;
 import user.RegistrationTest;
 

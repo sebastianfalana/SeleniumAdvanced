@@ -1,4 +1,4 @@
-package shopping;
+package pages.shopping;
 
 import com.github.javafaker.Faker;
 import org.openqa.selenium.WebDriver;
