@@ -14,7 +14,8 @@ public class PurchaseProductTest extends TestBase {
         String quantityInputByUser = "1";
         String address = "bla bla bla";
         String city = "Warsaw";
-        int zipCode = 11122;
+        String country = "Poland";
+        int zipCode = 00-710;
 
         new RegistrationTest().shouldRegisterNewUser();
         new TopManuPage(driver).selectClothesButton();
@@ -27,7 +28,11 @@ public class PurchaseProductTest extends TestBase {
                 .setCity(city)
                 .selectRandomIdState()
                 .setZipCode(zipCode)
-                .selectRandomIdCountry()
-                .selectContinueButton();
+                .selectFromUserIdCountry(country)
+                .selectContinueButton()
+                .selectRandomDeliveryOption()
+                .selectContinueDeliveryOptionButton()
+                .selectRandomPaymentOption()
+                .selectTermsOfServiceCheckbox()
     }
 }

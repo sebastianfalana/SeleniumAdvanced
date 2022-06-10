@@ -1,6 +1,6 @@
 package shopping;
 
-import org.openqa.selenium.By;
+import com.github.javafaker.Faker;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,6 +14,7 @@ public class CheckoutPage extends BasePage {
         super(driver);
     }
 
+    Faker faker = new Faker();
     @FindBy(css="[name='address1']")
     private WebElement addressInput;
     @FindBy(css="[name='city']")
@@ -25,7 +26,15 @@ public class CheckoutPage extends BasePage {
     @FindBy(css="[name='id_country']")
     private WebElement selectIdCountry;
     @FindBy(css="[name='confirm-addresses']")
-    private WebElement continueButton;
+    private WebElement continueAddressButton;
+    @FindBy(css="[name='confirmDeliveryOption']")
+    private WebElement continueDeliveryOptionButton;
+    @FindBy(css="#checkout-delivery-step [type='radio']")
+    private List<WebElement> deliveryOptionMethod;
+    @FindBy(css=".payment-options [type='radio']")
+    private List<WebElement> paymentOptionMethod;
+    @FindBy(css="[type='checkbox']")
+    private WebElement termsOfServiceCheckbox;
 
 
     public CheckoutPage setAddress(String addressFromUser){
@@ -54,12 +63,35 @@ public class CheckoutPage extends BasePage {
         getRandomElement(allIdCountry).click();
         return this;
     }
+    public CheckoutPage selectFromUserIdCountry(String countryFromUser) {
+        Select idState = new Select(selectIdCountry);
+        // continents.selectByIndex(2);
+        //idState.selectByValue(countryFromUser);
+        idState.selectByVisibleText(countryFromUser);
+        return this;
+    }
     public CheckoutPage setZipCode(int zipCodeFromUSer){
             sendKeys(zipCode, String.valueOf(zipCodeFromUSer));
             return this;
     }
     public CheckoutPage selectContinueButton(){
-        click(continueButton);
+        click(continueAddressButton);
+        return this;
+    }
+    public CheckoutPage selectContinueDeliveryOptionButton(){
+        click(continueDeliveryOptionButton);
+        return this;
+    }
+    public CheckoutPage selectRandomDeliveryOption() {
+        getRandomElement(deliveryOptionMethod).click();
+        return this;
+    }
+    public CheckoutPage selectRandomPaymentOption() {
+        getRandomElement(paymentOptionMethod).click();
+        return this;
+    }
+    public CheckoutPage selectTermsOfServiceCheckbox(){
+        click(termsOfServiceCheckbox);
         return this;
     }
 }
