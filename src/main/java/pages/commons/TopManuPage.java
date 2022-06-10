@@ -31,16 +31,13 @@ public class TopManuPage extends BasePage {
     public void goToSignIn(){
         click(signInButton);
     }
-
     public String getUserName(){
        return userName.getText();
     }
-
     public TopManuPage selectClothesButton(){
         click(clothesButton);
         return this;
     }
-
     public TopManuPage setSearchProduct(String productName){
         sendKeys(searchInput,productName);
         return this;
@@ -49,9 +46,11 @@ public class TopManuPage extends BasePage {
         click(searchIcon);
         return this;
     }
-
     public String getSearchResultNameOfProduct(){
         return searchResultNameProduct.getText();
     }
-
+    public TopManuPage selectUserName(){
+        click(userName);
+        return this;
+    }
 }

@@ -1,15 +1,20 @@
 package shopping;
 
 import base.TestBase;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import pages.commons.ProductsListingPage;
 import pages.commons.TopManuPage;
 import pages.shopping.BasketPage;
 import pages.shopping.CheckoutPage;
 import pages.shopping.ProductPage;
+import pages.user.userAccount.OrderHistory;
+import pages.user.userAccount.YourAccount;
 import user.RegistrationTest;
 
 public class PurchaseProductTest extends TestBase {
 
+    @Test
     public void shouldPurchaseProduct(){
         String productName = "HUMMINGBIRD T-SHIRT";
         String quantityInputByUser = "1";
@@ -35,5 +40,9 @@ public class PurchaseProductTest extends TestBase {
                 .selectContinueDeliveryOptionButton()
                 .selectRandomPaymentOption()
                 .selectTermsOfServiceCheckbox();
+        String orderNumber = new CheckoutPage(driver).getOrderNumber();
+        new TopManuPage(driver).selectUserName();
+        new YourAccount(driver).selectOderHistory();
+        Assert.assertEquals(orderNumber,new OrderHistory(driver).getOrder(orderNumber));
     }
 }

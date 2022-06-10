@@ -35,6 +35,8 @@ public class CheckoutPage extends BasePage {
     private List<WebElement> paymentOptionMethod;
     @FindBy(css="[type='checkbox']")
     private WebElement termsOfServiceCheckbox;
+    @FindBy(css="#order-details li:first-of-type")
+    private WebElement orderNumberElement;
 
 
     public CheckoutPage setAddress(String addressFromUser){
@@ -93,5 +95,8 @@ public class CheckoutPage extends BasePage {
     public CheckoutPage selectTermsOfServiceCheckbox(){
         click(termsOfServiceCheckbox);
         return this;
+    }
+    public String getOrderNumber(){
+        return orderNumberElement.getText();
     }
 }
