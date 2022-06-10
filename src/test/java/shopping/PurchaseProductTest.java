@@ -33,6 +33,6 @@ public class PurchaseProductTest extends TestBase {
                 .selectRandomDeliveryOption()
                 .selectContinueDeliveryOptionButton()
                 .selectRandomPaymentOption()
-                .selectTermsOfServiceCheckbox()
+                .selectTermsOfServiceCheckbox();
     }
 }
