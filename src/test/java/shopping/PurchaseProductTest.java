@@ -1,19 +1,47 @@
 package shopping;
 
 import base.TestBase;
-import org.testng.Assert;
+import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 import pages.commons.ProductsListingPage;
 import pages.commons.TopManuPage;
 import pages.shopping.BasketPage;
 import pages.shopping.CheckoutPage;
 import pages.shopping.ProductPage;
+import pages.user.LoginPage;
+import pages.user.RegistrationPage;
 import pages.user.userAccount.OrderHistory;
 import pages.user.userAccount.YourAccount;
-import user.RegistrationTest;
 
 public class PurchaseProductTest extends TestBase {
+    @Test
+    public void shouldRegisterNewUser(){
+        new TopManuPage(driver).goToSignIn();
+        new LoginPage(driver).selectToCreateAccount();
 
+        new RegistrationPage(driver).selectRandomSocialTitle()
+                .setFirstName("Seb")
+                .setLastName("Kow")
+                .setEmail("taxamoTest03@yopmail.com")
+                .setPassword("asdasd")
+                .setBirthday("5/12/1987")
+                .selectCustomerPrivacy()
+                .selectAcceptPrivatePolicy()
+                .selectSaveBtn();
+
+        Assertions.assertThat(new TopManuPage(driver).getUserName()).isEqualTo("Seb Kow");
+    }
+
+    @Test
+    public void shouldUserLogIn(){
+
+        String emailFromUser = "taxamoTest03@yopmail.com";
+        String passwordFromUser = "asdasd";
+        new TopManuPage(driver).goToSignIn();
+        new LoginPage(driver).setEmailToLogIn(emailFromUser)
+                .setPasswordToLogIn(passwordFromUser)
+                .selectSignInButton();
+    }
     @Test
     public void shouldPurchaseProduct(){
         String productName = "HUMMINGBIRD T-SHIRT";
@@ -21,9 +49,28 @@ public class PurchaseProductTest extends TestBase {
         String address = "bla bla bla";
         String city = "Warsaw";
         String country = "Poland";
-        int zipCode = 00-710;
+        String zipCode = "00-712";
+        String emailFromUser = "taxamoTest07@yopmail.com";
+        String passwordFromUser = "asdasd";
 
-        new RegistrationTest().shouldRegisterNewUser();
+        new TopManuPage(driver).goToSignIn();
+        new LoginPage(driver).selectToCreateAccount();
+        new RegistrationPage(driver).selectRandomSocialTitle()
+                .setFirstName("Seb")
+                .setLastName("Kow")
+                .setEmail(new RegistrationPage(driver).getRandomEmail())
+                .setPassword("asdasd")
+                .setBirthday("5/12/1987")
+                .selectCustomerPrivacy()
+                .selectAcceptPrivatePolicy()
+                .selectSaveBtn();
+        Assertions.assertThat(new TopManuPage(driver).getUserName()).isEqualTo("Seb Kow");
+
+//        new TopManuPage(driver).goToSignIn();
+//        new LoginPage(driver).setEmailToLogIn(emailFromUser)
+//                .setPasswordToLogIn(passwordFromUser)
+//                .selectSignInButton();
+
         new TopManuPage(driver).selectClothesButton();
         new ProductsListingPage(driver).clickProductFromTheList(productName);
         new ProductPage(driver).setQuantityInput(quantityInputByUser)
@@ -39,10 +86,12 @@ public class PurchaseProductTest extends TestBase {
                 .selectRandomDeliveryOption()
                 .selectContinueDeliveryOptionButton()
                 .selectRandomPaymentOption()
-                .selectTermsOfServiceCheckbox();
+                .selectTermsOfServiceCheckbox()
+                .selectPaymentConfirmation();
         String orderNumber = new CheckoutPage(driver).getOrderNumber();
+        System.out.println("Tu drukuje nr wyciety nr zamowienia "+orderNumber);
         new TopManuPage(driver).selectUserName();
         new YourAccount(driver).selectOderHistory();
-        Assert.assertEquals(orderNumber,new OrderHistory(driver).getOrder(orderNumber));
+        Assertions.assertThat(new OrderHistory(driver).getListOfOrdersInHistory()).contains(orderNumber);
     }
 }

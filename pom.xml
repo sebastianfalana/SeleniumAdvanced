@@ -15,7 +15,7 @@
 
         <selenium.version>4.1.4</selenium.version>
         <testng.version>7.5</testng.version>
-        <webdrivermanager.version>5.1.1</webdrivermanager.version>
+        <webdrivermanager.version>5.2.0</webdrivermanager.version>
     </properties>
 
     <dependencies>
@@ -63,7 +63,11 @@
             <scope>test</scope>
         </dependency>
 
-
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.36</version>
+        </dependency>
 
     </dependencies>
 

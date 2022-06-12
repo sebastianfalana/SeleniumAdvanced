@@ -14,7 +14,7 @@ public class RegistrationTest extends TestBase {
     @Test
     public void shouldRegisterNewUser(){
         new TopManuPage(driver).goToSignIn();
-        new LoginPage(driver).goToCreateAccount();
+        new LoginPage(driver).selectToCreateAccount();
 
         new RegistrationPage(driver).selectRandomSocialTitle()
                 .setFirstName("Seb")

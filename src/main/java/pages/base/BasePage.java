@@ -34,11 +34,6 @@ public class BasePage {
         sendKeys(element,text);
     }
 
-//    public void sendKeys(WebElement element, int value){
-//        System.out.println("Typing: " + value);
-//        element.sendKeys(value);
-//    }
-
     public void click(WebElement element){
         System.out.println("Clicking: "+element.getText());
         element.click();

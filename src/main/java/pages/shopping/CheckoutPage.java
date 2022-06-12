@@ -37,6 +37,8 @@ public class CheckoutPage extends BasePage {
     private WebElement termsOfServiceCheckbox;
     @FindBy(css="#order-details li:first-of-type")
     private WebElement orderNumberElement;
+    @FindBy(css="#payment-confirmation [type='submit']")
+    private WebElement paymentConfirmationButton;
 
 
     public CheckoutPage setAddress(String addressFromUser){
@@ -72,7 +74,7 @@ public class CheckoutPage extends BasePage {
         idState.selectByVisibleText(countryFromUser);
         return this;
     }
-    public CheckoutPage setZipCode(int zipCodeFromUSer){
+    public CheckoutPage setZipCode(String zipCodeFromUSer){
             sendKeys(zipCode, String.valueOf(zipCodeFromUSer));
             return this;
     }
@@ -85,7 +87,15 @@ public class CheckoutPage extends BasePage {
         return this;
     }
     public CheckoutPage selectRandomDeliveryOption() {
-        getRandomElement(deliveryOptionMethod).click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        WebElement deliveryOption = getRandomElement(deliveryOptionMethod);
+        if (!deliveryOption.isSelected()){
+            deliveryOption.click();
+        }
         return this;
     }
     public CheckoutPage selectRandomPaymentOption() {
@@ -96,7 +106,13 @@ public class CheckoutPage extends BasePage {
         click(termsOfServiceCheckbox);
         return this;
     }
+    public CheckoutPage selectPaymentConfirmation(){
+        click(paymentConfirmationButton);
+        return this;
+    }
     public String getOrderNumber(){
-        return orderNumberElement.getText();
+        String orderNumber = orderNumberElement.getText()
+        .replace("Order reference: ", "");
+        return orderNumber;
     }
 }
