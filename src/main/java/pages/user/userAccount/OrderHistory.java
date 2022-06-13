@@ -29,7 +29,7 @@ public class OrderHistory extends BasePage {
                     rowCells) {
                 if (Objects.equals(rowElement.getText(), orderNumberFromUser)){
                     orderNumber = rowElement.getText()
-                            .replace("Order Reference ", "");
+                            .replace("Order reference: ", "");
                 }
             }
         }
@@ -43,5 +43,14 @@ public class OrderHistory extends BasePage {
             ordersNumbers.add(orderElement.getText());
         }
         return ordersNumbers;
+    }
+
+    public void openOrderDetail (String oderToOpen){
+        for (WebElement row :
+                orderTableElements) {
+            if (row.getText().contains(oderToOpen)){
+                click(row.findElement(By.cssSelector("[data-link-action='view-order-details']")));
+            }
+        }
     }
 }

@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.base.BasePage;
 
+import java.util.List;
+
 public class TopManuPage extends BasePage {
     public TopManuPage(WebDriver driver) {
         super(driver);
@@ -27,6 +29,8 @@ public class TopManuPage extends BasePage {
 
     @FindBy(css="[class='h3 product-title']")
     private  WebElement searchResultNameProduct;
+    @FindBy(css="#top-menu > .category")
+    private List<WebElement> categoriesElements;
 
     public void goToSignIn(){
         click(signInButton);
@@ -52,5 +56,11 @@ public class TopManuPage extends BasePage {
     public TopManuPage selectUserName(){
         click(userName);
         return this;
+    }
+
+    public void selectCategory(){
+        for (int i = 0; i < categoriesElements.size(); i++) {
+
+        }
     }
 }
