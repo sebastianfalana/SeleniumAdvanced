@@ -57,10 +57,18 @@ public class TopManuPage extends BasePage {
         click(userName);
         return this;
     }
+//    public void goToCategories(){
+//        for (int i = 0; i < categoriesElements.size(); i++) {
+//            click(categoriesElements.get(i));
+//        }
+//    }
 
-    public void selectCategory(){
-        for (int i = 0; i < categoriesElements.size(); i++) {
-
+    public void goToCategory(String categoryNameFromUser){
+        for (WebElement category : categoriesElements) {
+            if(category.getText().equals(categoryNameFromUser)){
+                click(category);
+            }
         }
     }
+
 }
