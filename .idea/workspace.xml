@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73889fff-6993-4fc7-9a9f-4592fccde42d" name="Changes" comment="refactor &amp; add FindCategoriesTest &amp; Pages">
+    <list default="true" id="73889fff-6993-4fc7-9a9f-4592fccde42d" name="Changes" comment="edit goToCategories() method">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/commons/Breadcrumbs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/commons/TopManuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/commons/TopManuPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/commons/ProductsListingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/commons/ProductsListingPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Listing/FindCategoriesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Listing/FindCategoriesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -262,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655094357936</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="edit goToCategories() method">
+      <created>1655826126186</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1655826126186</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -289,7 +297,8 @@
     <MESSAGE value="Add delivery and payment select" />
     <MESSAGE value="Add test shouldPurchaseProduct" />
     <MESSAGE value="refactor &amp; add FindCategoriesTest &amp; Pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor &amp; add FindCategoriesTest &amp; Pages" />
+    <MESSAGE value="edit goToCategories() method" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit goToCategories() method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

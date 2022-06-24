@@ -19,7 +19,6 @@ public class ProductsListingPage extends BasePage {
     public WebElement getRandomProductFromTheList(){
         return getRandomElement(listOfProducts);
     }
-
     public void clickProductFromTheList(String nameOfProduct){
         for (WebElement product :
                 listOfProducts) {
@@ -30,9 +29,11 @@ public class ProductsListingPage extends BasePage {
             }
         }
     }
-
     public String getRandomProductDescription(){
         return getRandomProductFromTheList().getText();
+    }
+    public int getNumberOfProductsOnListing(){
+        return listOfProducts.size();
     }
 
 }
