@@ -67,6 +67,7 @@ public class TopManuPage extends BasePage {
         for (WebElement category : categoriesElements) {
             if(category.getText().equals(categoryNameFromUser)){
                 click(category);
+                return;
             }
         }
     }

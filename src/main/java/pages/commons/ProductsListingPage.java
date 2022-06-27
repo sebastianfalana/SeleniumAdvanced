@@ -14,6 +14,10 @@ public class ProductsListingPage extends BasePage {
 
     @FindBy(css="[class='h3 product-title']")
     private List<WebElement> listOfProducts;
+    @FindBy(css=".total-products")
+    private WebElement totalProducts;
+    @FindBy(css=".h1")
+    private WebElement categoryName;
 
 
     public WebElement getRandomProductFromTheList(){
@@ -34,6 +38,19 @@ public class ProductsListingPage extends BasePage {
     }
     public int getNumberOfProductsOnListing(){
         return listOfProducts.size();
+    }
+
+    public int  getQuantityOfProductsFromCategoryHeader(){
+        String totalProductsText = totalProducts.getText()
+                .replace("There is ","")
+                .replace(" product. ","")
+                .replace("There are ","")
+                .replace(" products.","");
+
+        return Integer.parseInt(totalProductsText);
+    }
+    public String getCategoryName(){
+        return categoryName.getText();
     }
 
 }

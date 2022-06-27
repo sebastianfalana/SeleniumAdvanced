@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73889fff-6993-4fc7-9a9f-4592fccde42d" name="Changes" comment="edit goToCategories() method">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/commons/Breadcrumbs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/commons/ProductsListingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/commons/ProductsListingPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/commons/TopManuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/commons/TopManuPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Listing/FindCategoriesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Listing/FindCategoriesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,18 +42,36 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.folding&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.PurchaseProductTest.shouldPurchaseProduct">
-    <configuration name="AddProductToBasketAndRemoveTest.shouldAddAndRemoveProduct" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.FindCategoriesTest.shouldFindCategory2">
+    <configuration name="FindCategoriesTest.shouldFindCategories" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumAdvanced" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="product.*" />
+          <option name="PATTERN" value="Listing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="product" />
-      <option name="MAIN_CLASS_NAME" value="product.AddProductToBasketAndRemoveTest" />
-      <option name="METHOD_NAME" value="shouldAddAndRemoveProduct" />
+      <option name="PACKAGE_NAME" value="Listing" />
+      <option name="MAIN_CLASS_NAME" value="Listing.FindCategoriesTest" />
+      <option name="METHOD_NAME" value="shouldFindCategories" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FindCategoriesTest.shouldFindCategory2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumAdvanced" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Listing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Listing" />
+      <option name="MAIN_CLASS_NAME" value="Listing.FindCategoriesTest" />
+      <option name="METHOD_NAME" value="shouldFindCategory2" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -114,31 +132,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationTest.shouldRegisterNewUser" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SeleniumAdvanced" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="user" />
-      <option name="MAIN_CLASS_NAME" value="user.RegistrationTest" />
-      <option name="METHOD_NAME" value="shouldRegisterNewUser" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.FindCategoriesTest.shouldFindCategory2" />
+        <item itemvalue="TestNG.FindCategoriesTest.shouldFindCategories" />
         <item itemvalue="TestNG.PurchaseProductTest.shouldPurchaseProduct" />
         <item itemvalue="TestNG.PurchaseProductTest.shouldRegisterNewUser" />
         <item itemvalue="TestNG.PurchaseProductTest" />
-        <item itemvalue="TestNG.AddProductToBasketAndRemoveTest.shouldAddAndRemoveProduct" />
-        <item itemvalue="TestNG.RegistrationTest.shouldRegisterNewUser" />
       </list>
     </recent_temporary>
   </component>
@@ -270,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655826126186</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="edit goToCategories() method">
+      <created>1656071419885</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1656071419885</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
