@@ -38,6 +38,10 @@ public class BasePage {
         System.out.println("Clicking: "+element.getText());
         element.click();
     }
+    public void hover(WebElement element){
+        System.out.println("Hovering: "+element.getText());
+        actions.moveToElement(element).perform();
+    }
 
     public void waitToBeVisible(WebElement element){
         wait.until(ExpectedConditions.visibilityOf(element));

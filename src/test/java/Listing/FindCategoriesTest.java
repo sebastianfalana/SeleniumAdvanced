@@ -30,9 +30,11 @@ public class FindCategoriesTest extends TestBase {
     }
     @Test
     public void shouldFindCategory2(){
-        goToCategory("CLOTHES");
-        goToCategory("ACCESSORIES");
-        goToCategory("ART");
+//        goToCategory("CLOTHES");
+//        goToCategory("ACCESSORIES");
+//        goToCategory("ART");
+
+        goToSubCategory("CLOTHES","MEN");
     }
 
     public void goToCategory(String categoryName){
@@ -44,6 +46,18 @@ public class FindCategoriesTest extends TestBase {
         Assertions.assertThat(new ProductsListingPage(driver).getNumberOfProductsOnListing())
                 .isEqualTo(new ProductsListingPage(driver).getQuantityOfProductsFromCategoryHeader());
         System.out.println("Product quantity: "+new ProductsListingPage(driver).getQuantityOfProductsFromCategoryHeader());
+
+    }
+    public void goToSubCategory(String categoryName, String subCategoryName){
+        new TopManuPage(driver).hoverCategory(categoryName);
+        new TopManuPage(driver).goToSubCategory(subCategoryName);
+        Assertions.assertThat(new ProductsListingPage(driver).getCategoryName().toUpperCase())
+                .isEqualTo(subCategoryName);
+        System.out.println("Sub-Category name: "+new ProductsListingPage(driver).getCategoryName());
+        Assertions.assertThat(new ProductsListingPage(driver).getNumberOfProductsOnListing())
+                .isEqualTo(new ProductsListingPage(driver).getQuantityOfProductsFromCategoryHeader());
+        System.out.println("Number of products in sub_category "+subCategoryName+" is - "+
+                new ProductsListingPage(driver).getNumberOfProductsOnListing());
 
     }
 

@@ -43,7 +43,7 @@ public class ProductsListingPage extends BasePage {
     public int  getQuantityOfProductsFromCategoryHeader(){
         String totalProductsText = totalProducts.getText()
                 .replace("There is ","")
-                .replace(" product. ","")
+                .replace(" product.","")
                 .replace("There are ","")
                 .replace(" products.","");
 

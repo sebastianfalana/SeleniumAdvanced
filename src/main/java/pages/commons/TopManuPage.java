@@ -31,6 +31,8 @@ public class TopManuPage extends BasePage {
     private  WebElement searchResultNameProduct;
     @FindBy(css="#top-menu > .category")
     private List<WebElement> categoriesElements;
+    @FindBy(css=".popover > .top-menu > .category >.dropdown-item")
+    private List<WebElement> subCategoriesElements;
 
     public void goToSignIn(){
         click(signInButton);
@@ -67,6 +69,22 @@ public class TopManuPage extends BasePage {
         for (WebElement category : categoriesElements) {
             if(category.getText().equals(categoryNameFromUser)){
                 click(category);
+                return;
+            }
+        }
+    }
+    public void hoverCategory(String categoryNameFromUser){
+        for (WebElement category : categoriesElements){
+            if(category.getText().equals(categoryNameFromUser)){
+                hover(category);
+                return;
+            }
+        }
+    }
+    public void goToSubCategory(String subCategoryNameFromUser) {
+        for (WebElement subCategory : subCategoriesElements) {
+            if (subCategory.getText().equals(subCategoryNameFromUser)) {
+                click(subCategory);
                 return;
             }
         }
